@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Jogo da adivinhação</h1>
+    <div id="texto"></div>
+    <script>
+        let player1 = prompt("Escolha um numero de um a 10 'Jogador 1'");
+        let player2 = prompt("Escolha um numero 'Jogador 2'");
+        let texto = ""
+        let tentativas = 1;
+
+        while (player2 != player1) {
+            player2 = prompt("Escolha um numero 'Jogador 2'");
+            tentativas++;
+            if (player2 == player1) {
+                texto = "Player2 acertou o numero " + player1 + " em " + tentativas + " tentativas."
+                document.getElementById("texto").innerHTML = texto;
+            }
+        }
+        
+        if (player2 == player1) {
+                texto = "Player2 acertou o numero " + player1 + " em " + tentativas + " tentativas."
+                document.getElementById("texto").innerHTML = texto;
+        }
+    </script>
+</body>
+</html>
